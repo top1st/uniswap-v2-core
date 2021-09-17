@@ -40,3 +40,6 @@ Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_
 ```shell
 npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
 ```
+
+
+Factory Deployed: 0xA3BceDADB23CfAA592aC42f5A18C98F98a37dA77
