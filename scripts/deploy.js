@@ -4,6 +4,9 @@
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
+require("dotenv").config();
+const { ethers } = hre;
+const deployer = new ethers.Wallet(process.env.PRIVATE_KEY, ethers.provider);
 
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command
@@ -14,8 +17,11 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const Factory = await hre.ethers.getContractFactory("MintyswapV2Factory");
-  const factory = await Factory.deploy();
+  const Factory = await hre.ethers.getContractFactory(
+    "MintyswapV2Factory",
+    deployer
+  );
+  const factory = await Factory.deploy(deployer.address);
 
   await factory.deployed();
 
