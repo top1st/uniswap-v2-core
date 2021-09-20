@@ -43,3 +43,5 @@ npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
 
 
 Factory Deployed: 0xA3BceDADB23CfAA592aC42f5A18C98F98a37dA77
+
+Init Code Hash: 0x3c78a372c08186bf6eddee76f36f8c6acbfdc71f0222dffd5de365dfbdcf3ef5
